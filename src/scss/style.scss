@@ -1,0 +1,1059 @@
+// 1 - Custom Theme Variables
+// --------------------------------------------
+
+// Theme Colours
+$theme-colors: (
+  'primary': #008da8,
+  'secondary': #0e273c,
+  'tertiary': #edbe00,
+  'white': #fff,
+  'black': #000,
+);
+
+// Bootstrap Sass Imports
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+
+// 2 - Template Styles
+// --------------------------------------------
+
+// Colours
+$primary: theme-color('primary');
+$secondary: theme-color('secondary');
+$tertiary: theme-color('tertiary');
+$white: theme-color('white');
+$black: theme-color('black');
+$grey-dark: #383838;
+$grey: #909090;
+$grey-light: #e6e6e6;
+
+
+// Typography
+@font-face {
+  font-family: 'Desyrel';
+  src: url('../fonts/desyrel.ttf');
+}
+
+@font-face {
+  font-family: 'Franchise';
+  src: url('../fonts/franchise.ttf');
+}
+
+@font-face {
+  font-family: 'SansaPro';
+  src: url('../fonts/sansapro.otf');
+}
+
+body {
+    background: $white;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'SansaPro';
+    font-size: 15px;
+    line-height: normal;
+}
+
+.text--primary {
+    color: theme-color('primary');
+}
+
+.text--secondary {
+    color: theme-color('secondary');
+}
+
+.text--tertiarty {
+    color: theme-color('tertiary');
+}
+
+
+// Buttons
+.btn {
+    font-family: 'Franchise';
+    font-size: 24px;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-radius: 3rem;
+    padding: 3px 20px;
+    margin: 0 5px 5px;
+    min-width: 175px;
+    background: rgba($black, 0.15);
+
+    &.btn-primary {
+        &:hover {
+            background-color: darken($primary, 50%)
+        }
+    }
+
+    &-sm {
+        font-size: 24px;
+    }
+}
+
+
+// Forms
+label {
+    display: block;
+    text-align: left;
+    margin: 2px 0;
+}
+
+::placeholder {
+    color: $grey;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    background: $white;
+    color: $grey;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    width: 100%;
+    padding: 7px;
+    margin: 0 0 15px;
+}
+
+input[type=submit] {
+    width: auto;
+    margin: 30px 0 0;
+}
+
+select {
+    height: 34px;
+}
+
+textarea {
+    min-height: 150px;
+    margin: 0;
+    height: 86%;
+}
+
+.step {
+    position: relative;
+}
+
+fieldset.nominate {
+    position: relative;
+
+    .input-radio {
+        margin: 15px 0 0;
+
+        input {
+            display: none;
+        }
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border: 2px solid $grey-dark;
+            border-radius: 50%;
+            vertical-align: top;
+        }
+
+    }
+
+}
+
+.disabled {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($white, 0.85)
+    }
+}
+
+
+// Grid
+.container {
+    max-width: 100%;
+
+    &.no-padding {
+        padding: 0;
+    }
+
+}
+
+.container-fluid {
+    max-width: 1600px;
+    padding: 0;
+    box-shadow: 0px 0px 30px rgba($black, 0.1);
+}
+
+
+// Navbar
+.navbar {
+    background: $grey-dark;
+    
+    .navbar-brand img {
+        max-width: 180px;
+    }
+
+    &.navbar-primary {
+        .navbar-nav {
+            margin: 10px 0 0;
+
+            .nav-item {
+                text-align: left;
+                border-top: 1px solid rgba($grey-light, 0.1);
+                padding: 5px 0 0;
+            }
+
+        }
+    }
+
+    &.navbar-top {
+        background: $black;
+        padding: 15px;
+
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    font-size: 13px;
+                    color: $grey-light;
+                    padding: 5px 15px 3px;
+
+                    span {
+                        font-weight: 900;
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+        }
+    }
+
+    &.navbar-dark {
+        .navbar-toggler {
+            border: none;
+        }
+
+    }
+
+}
+
+
+// Hero
+.hero {
+    position: relative;
+
+    &.homepage {
+        background: linear-gradient( rgba($black, 0.3), rgba($black, 0.3) ),url("../img/hero.jpg") center top no-repeat;
+    }
+
+    &.nominate {
+        background: linear-gradient( rgba($black, 0.3), rgba($black, 0.3) ),url("../img/hero2.jpg") center no-repeat;
+    }
+
+    &.managers {
+        background: linear-gradient( rgba($black, 0.3), rgba($black, 0.3) ),url("../img/hero3.jpg") center no-repeat;
+    }
+
+    &.values {
+        background: linear-gradient( rgba($black, 0.3), rgba($black, 0.3) ),url("../img/hero6.jpg") center no-repeat;
+    }
+
+    &.rewards {
+        background: linear-gradient( rgba($black, 0.3), rgba($black, 0.3) ),url("../img/hero5.jpg") center no-repeat;
+    }
+
+    .hero__content {
+        color: $white;
+        padding: 20% 10%;
+
+        .hero__heading {
+            font-family: "Franchise";
+            font-size: 50px;
+            line-height: 47px;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero__subheading {
+            font-family: "Desyrel";
+            font-size: 22px;
+            text-transform: capitalize;
+            margin: 15px 0 30px;
+        }
+
+    }
+
+}
+
+
+// Box
+.box {
+    position: relative;
+    padding: 50px 30px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+     .box__content {
+        position: relative;
+
+        .box__title {
+            font-family: "Franchise";
+            font-size: 50px;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+
+        .box__text {
+            font-family: "SansaPro";
+            font-size: 16px;
+            line-height: 20px;
+            color: $white;
+            margin: 15px 0 0;
+        }
+
+        .btn {
+            margin: 15px 0 0;
+        }
+
+    }
+
+    &.box--small {
+        padding: 15px;
+
+        .box__content {
+            margin-top: auto;
+            margin-bottom: auto;
+
+            .box__title {
+                margin: 0;
+            }
+
+            .box__text {
+                margin: 0;
+            }
+
+        }
+    }
+
+    & > .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &.bg-primary {
+        .overlay {
+            background: rgba($primary, 0.9);
+        }
+
+        .box__content {
+            .box__title {
+                color: $secondary;
+            }
+        }
+    }
+
+    &.bg-secondary {
+        .overlay {
+             background: rgba($secondary, 0.9);
+        }
+
+        .box__content {
+            .box__title {
+                color: $tertiary;
+            }
+        }
+    }
+
+    &.bg-tertiary {
+
+        .overlay {
+            background: rgba($tertiary, 0.9);
+        }
+
+        .box__content {
+            .box__title {
+                color: $primary;
+            }
+
+        }
+    }
+
+    &.image1 {
+        background-image: url("../img/image1.jpg");
+    }
+
+    &.image2 {
+        background-image: url("../img/image2.jpg");
+    }
+
+    &.image3 {
+        background-image: url("../img/image3.jpg");
+    }
+
+    &.image4 {
+        background-image: url("../img/image4.jpg");
+    }
+
+    &.image5 {
+        background-image: url("../img/image5.jpg");
+    }
+
+    &.image6 {
+        background-image: url("../img/image6.jpg");
+    }
+
+    &.image7 {
+        background-image: url("../img/image7.jpg");
+    }
+
+}
+
+
+// Section
+.section {
+    background: $white;
+    padding: 25px 30px;
+
+    &.background {
+        padding: 25px 0 300px 0;
+        background-image: url("../img/footer.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom right;
+    }
+
+    &.hall-of-fame {
+        background: url("../img/hall-of-fame.jpg") center;
+
+        .entry {
+            position: relative;
+            border-radius: 10px;
+            width: 100%;
+            margin: 30px 0;
+            border: 7px solid $white;
+            box-shadow: 0px 0px 0px 1px rgba($black, 0.25);
+
+            &.image1 {
+                background: url("../img/image1.jpg") center;
+            }
+
+            &.image2 {
+                background: url("../img/image2.jpg") center;
+            }
+
+            &.image3 {
+                background: url("../img/image3.jpg") center;
+            }
+
+            &.image4 {
+                background: url("../img/image1.jpg") center;
+            }
+
+            &.image5 {
+                background: url("../img/imag5.jpg") center;
+            }
+
+            &.image6 {
+                background: url("../img/image6.jpg") center;
+            }
+
+             &.image7 {
+                background: url("../img/image7.jpg") center;
+            }
+
+            .overlay {
+                position: absolute;
+                background: rgba($white, 0.6);
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            .entry__inner {
+                position: relative;
+                height: 100%;
+
+                .entry__name {
+                    font-family: "Helvetica";
+                    font-size: 24px;
+                    font-weight: 800;
+                    margin: 0;
+                    padding: 50px 0 0;
+                }
+
+                .entry__title {
+                    font-family: "Helvetica";
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 0;
+                }
+
+                .entry__type {
+                    font-family: "Franchise";
+                    color: $primary;
+                    text-transform: uppercase;
+                    font-size: 40px;
+                    font-weight: 800;
+                    margin: 0;
+                    padding: 0 0 50px;
+                }
+
+            }
+
+        }
+
+    }
+
+    .section__heading {
+        font-family: "Franchise";
+        color: $black;
+        font-size: 50px;
+        line-height: 45px;
+        text-transform: uppercase;
+        margin: 30px 0;
+    }
+
+    .section__text {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 30px 0;
+    }
+
+    .section__subheading {
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 30px 0 15px;
+    }
+
+    .btn {
+        background: $white;
+
+        &.btn-primary {
+            background: $primary;
+
+             &:hover {
+                background-color: darken($primary, 10%)
+            }
+
+        }
+
+    }
+
+}
+
+// eCards
+.ecard {
+    margin: 30px 0 0;
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+
+// Catalogue {
+.catalogue {
+    .catalogue__item {
+        width: 100%;
+        background-color: $grey-light;
+        margin: 0 0 30px;
+        padding: 15px;
+
+        img {
+            width: 100%;
+        }
+
+    }
+}
+
+// Footer
+.footer {
+    background: $grey-light;
+    padding: 30px 0;
+
+    .footer__links {
+        text-align: center;
+        padding: 0;
+        list-style-type: none;
+        margin: 30px auto 0;
+
+        .footer_link {
+            margin: 15px 0;
+
+            .btn {
+                margin: 0;
+                font-size: 22px;
+                background: transparent;
+                border-width: 1px;
+
+                 &:hover {
+                    background: $black;
+                    color: $white;
+                }
+
+            }
+
+        }
+
+    }
+
+    .footer__logo {
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+}
+
+
+// Media Queries
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .hero {
+        height: auto;
+
+        .navbar-top {
+            background: rgba($black, 0.5);
+            padding: 15px 0;
+        }
+
+        .navbar-primary {
+            margin: 30px 0;
+            background: transparent;
+            
+            .navbar-nav {
+                margin: 15px 0 0;
+                border-radius: 15rem;
+                box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.4);
+                background: rgba($black, 0.6);
+                
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .nav-item {
+                    text-align: center;
+                    border: none;
+                    padding: 12px 0 10px;
+
+                    &:hover {
+                        background: rgba($black, 0.3);
+                    }
+
+                    &.active {
+                        background: theme-color("primary");
+                        margin-left: -1px;
+                        margin-right: -1px;
+
+                        .nav-link {
+                            border-right: none;
+                        }
+
+                    }
+
+                    &:first-child {
+                        border-top-left-radius: 15rem;
+                        border-bottom-left-radius: 15rem;
+                        padding-left: 3px;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: 15rem;
+                        border-bottom-right-radius: 15rem;
+                        padding-right: 3px;
+
+                        .nav-link {
+                            border-right: none;
+                        }
+
+                    }
+
+                    .nav-link {
+                        font-size: 14px;
+                        line-height: 12px;
+                        color: $white;
+                        padding: 0 5px;
+                        border-right: 1px solid rgba($white, 0.4);
+                    }
+
+                }
+
+            }
+
+            .navbar-search {
+                width: 180px;
+                border-bottom: 1px solid $white;
+
+
+
+                .input-group-text,
+                .fa-search,
+                .form-control,
+                ::placeholder {
+                    background: transparent;
+                    border: 0;
+                    color: $white;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    box-shadow: none;
+                }
+
+            }
+        }
+
+        .hero__content {
+            padding: 6% 10% 10%;
+
+            .hero__heading {
+                font-size: 75px;
+                line-height: 70px;
+            }
+
+            .hero__subheading {
+                font-size: 26px;
+            }
+
+        }
+
+    }
+
+    .box {
+        &.box--small {
+            padding: 15px;
+
+            .box__content {
+                margin-top: auto;
+                margin-bottom: auto;
+                
+                .box__title {
+                    font-size: 36px;
+                }
+
+                .box__text {
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+            }
+        }
+
+    }
+
+    .section {
+        padding: 50px 30px;
+
+        &.background {
+            padding: 75px 0 400px 0;
+        }
+
+        .section__heading {
+            font-size: 60px;
+            line-height: 55px;
+
+            &-small {
+                font-size: 50px;
+            }
+        }
+
+    }
+
+    .footer {
+        padding: 30px;
+
+        .footer__links {
+            text-align: left;
+            margin: 0 auto;
+
+            .footer_link {
+                display: inline-block;
+                margin: 0 5px;
+                
+                .btn {
+                    min-width: 150px;
+                }
+            }
+        }
+
+        .footer__logo {
+            margin: 0;
+            float: right;
+        }
+
+    }
+
+    textarea {
+        min-height: 150px;
+    }
+
+    label {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .hero {
+        .navbar-top {
+            padding: 15px 30px;
+
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .navbar-primary {
+            padding: 30px 50px;
+            margin: 0;
+
+            .navbar-nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 15px;
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+
+        .hero__content {
+
+            .hero__heading {
+                font-size: 95px;
+                line-height: 100px;
+            }
+
+            .hero__subheading {
+                font-size: 30px;
+                margin: 10px 0 20px;
+            }
+
+            .btn {
+                font-size: 34px;
+                padding: 3px 60px;
+                margin: 20px 0 0;
+            }
+
+        }
+
+    }
+
+    .box {
+        padding: 50px;
+
+        .box__content {
+            .box__title {
+                font-size: 60px;
+                line-height: 55px;
+            }
+
+            .box__text {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 20px 0 10px;
+            }
+
+        }
+    }
+
+    .section {
+        padding: 100px 30px;
+
+        &.background {
+            padding: 100px 0 500px 0;
+        }
+
+        .section__heading {
+            font-family: "Franchise";
+            color: $black;
+            font-size: 90px;
+            line-height: 100px;
+            text-transform: uppercase;
+
+            &-small {
+                font-size: 50px;
+                line-height: 45px;
+            }
+
+        }
+
+        .section__text {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 30px 0;
+        }
+
+    }
+
+    .footer {
+        padding: 30px 50px;
+
+        .footer__links {
+            .footer_link {
+
+                .btn {
+                    font-size: 26px;
+                    min-width: 175px;
+                }
+            }
+        }
+
+        .footer__logo {
+            max-width: 250px;
+            text-align: right;
+        }
+    }
+
+    label {
+        margin: 5px 0 7px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+
+        .navbar-top {
+            padding: 15px 60px;
+        }
+
+        .hero__content {
+             .hero__heading {
+                font-size: 110px;
+                line-height: 100px;
+            }
+
+            .hero__subheading {
+                font-size: 30px;
+            }
+
+            .btn {
+                font-size: 40px;
+                padding: 5px 60px;
+                margin: 25px 0 0;
+            }
+
+        }
+
+        .navbar-primary {
+            padding: 30px 80px;
+
+            .navbar-nav {
+                .nav-item {
+                    padding: 15px 0 12px;
+
+                    .nav-link {
+                        font-size: 17px;
+                        padding: 0 25px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .box {
+        padding: 90px 50px;
+
+        .box__content {
+            .box__title {
+                font-size: 90px;
+                line-height: 75px;
+            }
+
+            .box__text {
+                font-size: 20px;
+                line-height: 22px;
+                margin: 30px 0 20px;
+            }
+
+        }
+
+        &.box--small {
+            padding: 20px;
+
+            .box__content {
+
+                .box__title {
+                    font-size: 46px;
+                }
+
+            }
+        }
+
+    }
+
+    .col-sm-4 {
+        .box {
+            padding: 130px 20px;
+
+            .box__content {
+                 .box__title {
+                    font-size: 80px;
+                    line-height: 70px;
+                }
+
+                .box__text {
+                    font-size: 22px;
+                    line-height: 28px;
+                    margin: 20px 60px 0;
+                }
+
+            }
+
+        }
+
+    }
+
+    .section {
+          &.background {
+            padding: 75px 0 750px 0;
+        }
+
+    }
+
+    .entry {
+        .entry__name {
+            padding: 60px 0 0;
+        }
+
+        .entry__type {
+            padding: 0 0 60px;
+        }
+
+    }
+
+    .footer {
+        padding: 60px 80px;
+    }
+
+    .btn {
+        font-size: 36px;
+        margin: 30px 0 0;
+        padding: 5px 35px;
+    }
+
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Whitebox</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+
+            <!-- Hero -->
+            <div class="hero nominate text-center">
+
+                <!-- Top Navbar -->
+                <nav class="navbar d-none d-sm-block navbar-expand-sm navbar-dark navbar-top">
+
+                    <div class="navbar-collapse" id="navbar">
+                        
+                         <!-- Menu -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="managers.html">Managers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hi Dan, you have <span>100 Points<span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Exit</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </nav>
+
+                <!-- Primary Navbar -->
+                <nav class="navbar navbar-expand-md navbar-dark navbar-primary">
+
+                    <!-- Brand -->
+                    <div class="d-flex order-0">
+                        <a class="navbar-brand" href="#">
+                            <span class="sr-only">Home</span><img src="img/logo_sodexo-white.png" alt="" />
+                        </a>
+                    </div>
+
+                    <!-- Collapse -->
+                    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+
+                        <!-- Main Menu -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="values.html">Values</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nominate.html">Nominate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hall of Fame</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Rewards</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                     <!-- Search -->
+                    <span class="order-1 order-md-last">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-search">
+                            <div class="input-group d-none d-md-block">
+                                <div class="input-group-text">
+                                    <i class="fa fa-search"></i>
+                                    <input class="form-control" type="search" placeholder="Search" id="search">
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+
+                </nav>
+
+                <!-- Hero Content -->
+                <div class="hero__content">
+                    <h1 class="hero__heading">Lorem ipsum title goes here</h1>
+                    <h2 class="hero__subheading">Place a sub text sentence here if required</h2>
+                    <a class="btn btn-outline-white btn-lg" href="#" role="button">Read more</a>
+                </div>
+
+            </div>
+
+            <!-- Main Section -->
+            <div class="section background text-center">
+                <div class="container container-padding">
+
+                    <h3 class="section__heading">Make a Nomination</h3>
+                    <p class="section__text">Who in your business has been living and breathing your brand values? Anyone can nominate a colleague for a reward here. Simply choose which brand value they have excelled in via the links below.</p>
+
+                    <!-- Step 1 -->
+                    <fieldset class="nominate step1">
+                        <p class="section__subheading">Is this a team or individual nomination?</p>
+                        <div class="row no-gutters">
+                            <div class="col-12 col-sm-6">
+                                <a class="btn btn-primary btn-sm float-sm-right my-md-0 mx-2" href="#" role="button">Individual Nomination</a>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <a class="btn btn-primary btn-sm float-sm-left my-md-0 mx-2" href="#" role="button">Team Nomination</a>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Step 2 -->
+                    <fieldset class="nominate step2">
+                        <p class="section__subheading">Find the person you want to thank by branch/location or using their personal details:</p>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label for="dept">Select Department</label>
+                                <input type="text" name="dept" id="dept" placeholder="Select department" />
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label for="name">Enter Name</label>
+                                <input type="text" name="name" id="name" placeholder="Enter your full name" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Step 3 -->
+                    <fieldset class="nominate step3">
+                        <h3 class="section__heading section__heading-small">Tell us about the nomination</h3>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <label for="value">Choose your Value</label>
+                                <select name="value">
+                                    <option value="">Choose your Value</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <label for="overview">Give a brief overview</label>
+                                <select name="overview">
+                                    <option value="">Brief overview</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <label for="amount">Amount</label>
+                                <select name="amount">
+                                    <option value="">Select amount</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <label for="detail">Give us some detail</label>
+                                <select name="detail">
+                                    <option value="">Type something...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label for="detail">Give us some detail</label>
+                                <textarea>Type something...</textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Step 4 -->
+                    <fieldset class="nominate step4">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card1.png" alt="" />
+                                    <label for="card1" class="input-radio">
+                                        <input type="radio" name="card" id="card1" />
+                                        Thank You
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card2.png" alt="" />
+                                    <label for="card2" class="input-radio">
+                                        <input type="radio" name="card" id="card2" />
+                                        You Rock!
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card3.png" alt="" />
+                                    <label for="card3" class="input-radio">
+                                        <input type="radio" name="card" id="card3" />
+                                        Love what you do!
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card4.png" alt="" />
+                                    <label for="card4" class="input-radio">
+                                        <input type="radio" name="card" id="card4" />
+                                        You Star!
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card5.png" alt="" />
+                                    <label for="card5" class="input-radio">
+                                        <input type="radio" name="card" id="card5" />
+                                        Congratulations
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="ecard">
+                                    <img src="img/card6.png" alt="" />
+                                    <label for="card6" class="input-radio">
+                                        <input type="radio" name="card" id="card6" />
+                                        You're a legend!
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="btn btn-primary float-sm-right" type="submit" value="Submit">
+                    </fieldset>
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="row no-gutters">
+
+                    <div class="col-12 col-md-9 order-12 order-md-1 my-auto">
+                        <ul class="footer__links">
+                            <li class="footer_link"><a class="btn btn-outline-black btn-lg" href="#" role="button">Privacy Policy</a></li>
+                            <li class="footer_link"><a class="btn btn-outline-black btn-lg" href="#" role="button">User Guide</a></li>
+                            <li class="footer_link"><a class="btn btn-outline-black btn-lg" href="#" role="button">Contact Us</a></li>
+                        <ul>
+                    </div>
+
+                    <div class="col-12 col-md-3 order-1 order-md-12">
+                        <a class="footer__logo" href="#"><img src="img/logo_sodexo-black.png" alt="" /></a>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+
+        <script src="js/bundle.js"></script>
+
+    </body>
+</html>
